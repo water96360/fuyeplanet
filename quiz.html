@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FuyePlanet - 副业导航</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+    }
+    nav a {
+      color: #fff;
+      padding: 1rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #666;
+    }
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('nav a');
+      links.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          document.body.style.opacity = 0;
+          setTimeout(() => {
+            window.location.href = link.href;
+          }, 300);
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>FuyePlanet 副业星球</h1>
+  </header>
+  <nav>
+    <a href="video.html">视频剪辑</a>
+    <a href="ecommerce.html">电商</a>
+    <a href="content.html">自媒体</a>
+    <a href="game.html">小游戏</a>
+    <a href="quiz.html">副业测评</a>
+  </nav>
+  <main>
+    <h2>欢迎来到副业星球</h2>
+    <p>探索属于你的副业之路</p>
+  </main>
+  <footer>
+    <p>&copy; 2025 FuyePlanet. All rights reserved.</p>
+  </footer>
+</body>
+</html>
